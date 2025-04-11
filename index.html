@@ -76,6 +76,11 @@
       color: #f1f1f1;
     }
 
+    /* Make hamburger visible in dark mode */
+body.dark-mode .hamburger span {
+  background: #fff;
+}
+
     .logo {
       font-weight: bold;
       color: #000;
@@ -153,6 +158,77 @@
       padding: 30px 0;
       color: #555;
     }
+
+    /* Hamburger icon style */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #000;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 15px;
+    display: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  body.dark-mode .hamburger span {
+  background: #fff;
+}
+
+body.dark-mode .nav {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .nav-link {
+    color: #000 !important;
+  }
+}
+
+    @media (max-width: 768px) {
+
+
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+
+  .glass-section {
+    width: 95%;
+    padding: 30px 15px;
+  }
+}
+
+    
   </style>
 </head>
 
@@ -166,25 +242,34 @@
   <div id="particles-js"></div>
 
   <!-- Navigation -->
-  <header class="glassy-nav">
-    <div class="container d-flex justify-content-between align-items-center py-3">
-      <h1 class="logo">Rama</h1>
-      <ul class="nav">
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item"><button class="btn glassy-btn" id="darkToggle">Toggle Dark Mode</button></li>
-      </ul>
+<header class="glassy-nav">
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <h1 class="logo">Rama</h1>
+
+    <!-- Hamburger icon (mobile only) -->
+    <div class="hamburger d-md-none" onclick="toggleMobileNav()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </header>
+
+    <!-- Navigation Menu -->
+    <ul class="nav" id="navMenu">
+      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      <li class="nav-item"><button class="btn glassy-btn" id="darkToggle">Toggle Dark Mode</button></li>
+    </ul>
+  </div>
+</header>
 
   <!-- Hero Section -->
   <section class="hero-section text-center">
     <img src="./assets/images/photo.jpg" alt="Rama Subramanian" class="profile-pic" />
     <h2 class="mt-4 gradient-heading">Hi, I'm Rama Subramanian</h2>
     <p class="lead">Frontend Developer • Problem Solver • Tech Enthusiast</p>
-    <a class="btn glassy-btn" href="./assets/pdf/resume-rama1.pdf" download="rama_resume">Download CV</a>
+    <a class="btn glassy-btn" href="./assets/pdf/rama_resume.pdf" download="rama_resume">Download CV</a>
   </section>
 
   <!-- About -->
@@ -362,6 +447,13 @@
       isDarkMode = !isDarkMode;
       loadParticles(isDarkMode ? "#ffffff" : "#000000", isDarkMode ? "#ffffff" : "#000000");
     });
+
+  function toggleMobileNav() {
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('show');
+  }
+</script>
+
   </script>
 </body>
 
