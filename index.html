@@ -77,9 +77,9 @@
     }
 
     /* Make hamburger visible in dark mode */
-body.dark-mode .hamburger span {
-  background: #fff;
-}
+    body.dark-mode .hamburger span {
+      background: #fff;
+    }
 
     .logo {
       font-weight: bold;
@@ -160,75 +160,73 @@ body.dark-mode .hamburger span {
     }
 
     /* Hamburger icon style */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  z-index: 1001;
-}
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1001;
+    }
 
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: #000;
-  margin: 4px 0;
-  transition: 0.4s;
-}
+    .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #000;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
 
-/* Mobile view */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
+    /* Mobile view */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
 
-  .nav {
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    flex-direction: column;
-    padding: 15px;
-    display: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
+      .nav {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        flex-direction: column;
+        padding: 15px;
+        display: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
 
-  body.dark-mode .hamburger span {
-  background: #fff;
-}
+      body.dark-mode .hamburger span {
+        background: #fff;
+      }
 
-body.dark-mode .nav {
-  background: rgba(0, 0, 0, 0.9);
-}
+      body.dark-mode .nav {
+        background: rgba(0, 0, 0, 0.9);
+      }
 
-  .nav.show {
-    display: flex;
-  }
+      .nav.show {
+        display: flex;
+      }
 
-  .nav-item {
-    margin: 10px 0;
-  }
+      .nav-item {
+        margin: 10px 0;
+      }
 
-  .nav-link {
-    color: #000 !important;
-  }
-}
+      .nav-link {
+        color: #000 !important;
+      }
+    }
 
     @media (max-width: 768px) {
 
 
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
 
-  .glass-section {
-    width: 95%;
-    padding: 30px 15px;
-  }
-}
-
-    
+      .glass-section {
+        width: 95%;
+        padding: 30px 15px;
+      }
+    }
   </style>
 </head>
 
@@ -242,27 +240,27 @@ body.dark-mode .nav {
   <div id="particles-js"></div>
 
   <!-- Navigation -->
-<header class="glassy-nav">
-  <div class="container d-flex justify-content-between align-items-center py-3">
-    <h1 class="logo">Rama</h1>
+  <header class="glassy-nav">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+      <h1 class="logo">Rama</h1>
 
-    <!-- Hamburger icon (mobile only) -->
-    <div class="hamburger d-md-none" onclick="toggleMobileNav()">
-      <span></span>
-      <span></span>
-      <span></span>
+      <!-- Hamburger icon (mobile only) -->
+      <div class="hamburger d-md-none" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- Navigation Menu -->
+      <ul class="nav" id="navMenu">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        <li class="nav-item"><button class="btn glassy-btn" id="darkToggle">Toggle Dark Mode</button></li>
+      </ul>
     </div>
-
-    <!-- Navigation Menu -->
-    <ul class="nav" id="navMenu">
-      <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      <li class="nav-item"><button class="btn glassy-btn" id="darkToggle">Toggle Dark Mode</button></li>
-    </ul>
-  </div>
-</header>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero-section text-center">
@@ -277,125 +275,135 @@ body.dark-mode .nav {
     <div class="container">
       <h3 class="text-center mb-4 gradient-heading">About Me</h3>
       <p>
-        I'm a creative and passionate frontend developer who loves building beautiful, user-friendly applications. With a strong background in HTML, CSS, JavaScript, React, and Python, I focus on delivering pixel-perfect experiences.
+        I'm a creative and passionate frontend developer who loves building beautiful, user-friendly applications. With
+        a strong background in HTML, CSS, JavaScript, React, and Python, I focus on delivering pixel-perfect
+        experiences.
       </p>
     </div>
   </section>
 
-    <!-- Education -->
-    <section id="education" class="glass-section">
-      <div class="container">
-        <h3 class="text-center mb-4 gradient-heading">Education</h3>
-        <p><strong>Bishop Heber College</strong></p>
-        <p>During my time at Bishop Heber College, I pursued a Bachelor's degree in Computer Science, successfully completing my studies from 2018 to 2021. I achieved a commendable CGPA of 8.3, showcasing my dedication to academic excellence in the field of computer science.</p>
+  <!-- Education -->
+  <section id="education" class="glass-section">
+    <div class="container">
+      <h3 class="text-center mb-4 gradient-heading">Education</h3>
+      <p><strong>Bishop Heber College</strong></p>
+      <p>During my time at Bishop Heber College, I pursued a Bachelor's degree in Computer Science, successfully
+        completing my studies from 2018 to 2021. I achieved a commendable CGPA of 8.3, showcasing my dedication to
+        academic excellence in the field of computer science.</p>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="glass-section">
+    <div class="container">
+      <h3 class="text-center mb-4 gradient-heading">Work Experience</h3>
+
+      <p><strong>Web Developer – RTB Demand</strong><br>Bengaluru, India | 05/2024 - Current</p>
+      <ul>
+        <li>Designed responsive layouts using HTML, CSS, and JavaScript for cross-device compatibility.</li>
+        <li>Implemented media queries for seamless UX on mobile, tablet, and desktop.</li>
+        <li>Added dynamic menus and sliders using JavaScript.</li>
+        <li>Focused on clean code and modern design principles.</li>
+      </ul>
+
+      <p><strong>Junior Software Engineer – Credo Health</strong><br>March 2022 - April 2023</p>
+      <ul>
+        <li>Built scalable APIs using .NET Core, Azure Functions, and other cloud technologies.</li>
+        <li>Led database design using PostgreSQL and PL/SQL window functions.</li>
+        <li>Built APIs in C# using .NET Core MVC architecture.</li>
+        <li>Managed deployments and CI/CD with Azure DevOps.</li>
+      </ul>
+
+      <p><strong>Junior Software Engineer – EQ Health</strong><br>July 2021 - March 2022</p>
+      <ul>
+        <li>Built responsive UIs using HTML, CSS, React, and TypeScript.</li>
+        <li>Led database design with PostgreSQL and PL/SQL.</li>
+        <li>Built APIs using C# and .NET Core.</li>
+      </ul>
+
+      <p><strong>QA Intern – Kringle AI</strong><br>August 2022 - December 2022</p>
+      <ul>
+        <li>Performed unit testing for E2E applications and websites.</li>
+        <li>Created data reports using Heidi SQL.</li>
+        <li>Tested scalable APIs using Postman.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Skills and Certifications -->
+  <section id="skills" class="glass-section">
+    <div class="container">
+      <h3 class="text-center mb-4 gradient-heading">Skills & Certifications</h3>
+
+      <p><strong>Skills:</strong> C#, HTML5, JavaScript, React.js, PLSQL, CSS3, Git, Python, NumPy, Pandas</p>
+
+      <p><strong>Certifications:</strong></p>
+      <ul>
+        <li>Google: Fundamentals of Digital Marketing (08/2020)</li>
+        <li>Edureka: Python for Data Science (07/2021)</li>
+        <li>University of Michigan: Python For Everybody (05/2021)</li>
+        <li>LetsUpgrade: HTML CSS Bootcamp (07/2022)</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- Projects -->
+  <section id="projects" class="glass-section">
+    <div class="container">
+      <h3 class="text-center mb-4 gradient-heading">Projects</h3>
+
+      <!-- Project 1 -->
+      <div class="project-box">
+        <h4>Nap – The Luxe Stay</h4>
+        <p>A premium hotel and vacation stay website built with a sleek user interface, showcasing luxury rooms,
+          facilities, and seamless navigation for users looking for an elegant booking experience.</p>
+        <a href="https://github.com/codewithrama/nap" target="_blank" class="btn btn-primary">View Repo</a>
+        <a href="https://naphaven.netlify.app/" target="_blank" class="btn btn-secondary">Live Site</a>
       </div>
-    </section>
-  
-    <!-- Experience -->
-    <section id="experience" class="glass-section">
-      <div class="container">
-        <h3 class="text-center mb-4 gradient-heading">Work Experience</h3>
-  
-        <p><strong>Web Developer – RTB Demand</strong><br>Bengaluru, India | 05/2024 - Current</p>
-        <ul>
-          <li>Designed responsive layouts using HTML, CSS, and JavaScript for cross-device compatibility.</li>
-          <li>Implemented media queries for seamless UX on mobile, tablet, and desktop.</li>
-          <li>Added dynamic menus and sliders using JavaScript.</li>
-          <li>Focused on clean code and modern design principles.</li>
-        </ul>
-  
-        <p><strong>Junior Software Engineer – Credo Health</strong><br>March 2022 - April 2023</p>
-        <ul>
-          <li>Built scalable APIs using .NET Core, Azure Functions, and other cloud technologies.</li>
-          <li>Led database design using PostgreSQL and PL/SQL window functions.</li>
-          <li>Built APIs in C# using .NET Core MVC architecture.</li>
-          <li>Managed deployments and CI/CD with Azure DevOps.</li>
-        </ul>
-  
-        <p><strong>Junior Software Engineer – EQ Health</strong><br>July 2021 - March 2022</p>
-        <ul>
-          <li>Built responsive UIs using HTML, CSS, React, and TypeScript.</li>
-          <li>Led database design with PostgreSQL and PL/SQL.</li>
-          <li>Built APIs using C# and .NET Core.</li>
-        </ul>
-  
-        <p><strong>QA Intern – Kringle AI</strong><br>August 2022 - December 2022</p>
-        <ul>
-          <li>Performed unit testing for E2E applications and websites.</li>
-          <li>Created data reports using Heidi SQL.</li>
-          <li>Tested scalable APIs using Postman.</li>
-        </ul>
+
+
+      <!-- Project 2 -->
+      <div class="project-box mt-4">
+        <h4>BudgetUWise - Track your Budget </h4>
+        <p>A dynamic and interactive JavaScript-based budget management tool to track income, expenses, and available
+          balance with real-time updates and multi-currency support.</p>
+        <a href="https://github.com/codewithrama/BudgetWise" target="_blank" class="btn btn-primary">View Repo</a>
+        <a href="https://budgetuwise.netlify.app" target="_blank" class="btn btn-secondary">Live Site</a>
       </div>
-    </section>
-  
-    <!-- Skills and Certifications -->
-    <section id="skills" class="glass-section">
-      <div class="container">
-        <h3 class="text-center mb-4 gradient-heading">Skills & Certifications</h3>
-  
-        <p><strong>Skills:</strong> C#, HTML5, JavaScript, React.js, PLSQL, CSS3, Git, Python, NumPy, Pandas</p>
-  
-        <p><strong>Certifications:</strong></p>
-        <ul>
-          <li>Google: Fundamentals of Digital Marketing (08/2020)</li>
-          <li>Edureka: Python for Data Science (07/2021)</li>
-          <li>University of Michigan: Python For Everybody (05/2021)</li>
-          <li>LetsUpgrade: HTML CSS Bootcamp (07/2022)</li>
-        </ul>
+
+      <!-- Project 3 -->
+      <div class="project-box mt-4">
+        <h4>Four Technologies – A Startup Company Branding Site</h4>
+        <p>A corporate branding website for Four Technologies, a SaaS & IT staffing startup. Built with responsiveness,
+          client focus, and startup vibes to enhance business credibility and service exposure.</p>
+        <a href="https://github.com/TeamFourtech/fourtechnologies" target="_blank" class="btn btn-primary">View Repo</a>
+        <a href="https://www.fourtechnologies.in/" target="_blank" class="btn btn-secondary">Live Site</a>
       </div>
-    </section>
-  
 
-<!-- Projects -->
-<section id="projects" class="glass-section">
-  <div class="container">
-    <h3 class="text-center mb-4 gradient-heading">Projects</h3>
+      <!-- Project 4 -->
+      <div class="project-box mt-4">
+        <h4>Task Manager - App</h4>
+        <p>To-do List App built with Vanilla JavaScript — Add, complete, delete tasks with dark mode & character limit
+          indicator.</p>
+        <a href="https://github.com/codewithrama/task-manager.app" target="_blank" class="btn btn-primary">View Repo</a>
+        <a href="https://taskifylog.netlify.app/" target="_blank" class="btn btn-secondary">Live Site</a>
+      </div>
 
-    <!-- Project 1 -->
-    <div class="project-box">
-      <h4>Nap – The Luxe Stay</h4>
-      <p>A premium hotel and vacation stay website built with a sleek user interface, showcasing luxury rooms, facilities, and seamless navigation for users looking for an elegant booking experience.</p>
-      <a href="https://github.com/codewithrama/nap" target="_blank" class="btn btn-primary">View Repo</a>
-      <a href="https://naphaven.netlify.app/" target="_blank" class="btn btn-secondary">Live Site</a>
+
+      <div class="project-box mt-4">
+        <h4>SPlit The Bill</h4>
+        <p>A simple React app to split bills between friends. Users can add friends, enter shared expenses, and
+          automatically
+          calculate who owes whom. Built with React hooks, controlled components, and state lifting.</p>
+        <a href="https://github.com/codewithrama/Split-the-BIll/" target="_blank" class="btn btn-primary">View Repo</a>
+        <a href="https://splitwithme.netlify.app" target="_blank" class="btn btn-secondary">Live Site</a>
+      </div>
+
     </div>
 
 
-        <!-- Project 2 -->
-    <div class="project-box mt-4">
-      <h4>BudgetUWise - Track your Budget </h4>
-      <p>A dynamic and interactive JavaScript-based budget management tool to track income, expenses, and available balance with real-time updates and multi-currency support.</p>
-      <a href="https://github.com/codewithrama/BudgetWise" target="_blank" class="btn btn-primary">View Repo</a>
-      <a href="https://budgetuwise.netlify.app" target="_blank" class="btn btn-secondary">Live Site</a>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="project-box mt-4">
-      <h4>Four Technologies – A Startup Company Branding Site</h4>
-      <p>A corporate branding website for Four Technologies, a SaaS & IT staffing startup. Built with responsiveness, client focus, and startup vibes to enhance business credibility and service exposure.</p>
-      <a href="https://github.com/TeamFourtech/fourtechnologies" target="_blank" class="btn btn-primary">View Repo</a>
-      <a href="https://www.fourtechnologies.in/" target="_blank" class="btn btn-secondary">Live Site</a>
-    </div>
-
-    <!-- Project 4 -->
-    <div class="project-box mt-4">
-      <h4>Task Manager - App</h4>
-  <p>To-do List App built with Vanilla JavaScript — Add, complete, delete tasks with dark mode & character limit indicator.</p>
-      <a href="https://github.com/codewithrama/task-manager.app" target="_blank" class="btn btn-primary">View Repo</a>
-      <a href="https://taskifylog.netlify.app/" target="_blank" class="btn btn-secondary">Live Site</a>
-    </div>
-
-
-    <div class="project-box">
-      <h4> RTB Demand</h4><p>
-    <p>A professional landing page for RTB Demand, an ad tech company, highlighting its programmatic advertising solutions, monetization tools, and user-friendly interface for publishers and advertisers.</p>
-      <a href="https://rtbdemand.com/monetize.html" target="_blank" class="btn btn-primary">View Repo</a>
-      <a href="https://rtbdemand.com/monetize.html" target="_blank" class="btn btn-secondary">Live Site</a>
-    </div>
-    
-  </div>
-
-    
-</section>
+  </section>
 
 
   <!-- Contact -->
@@ -404,21 +412,22 @@ body.dark-mode .nav {
       <h3 class="text-center mb-4 gradient-heading">Contact Me</h3>
       <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="b946c840-21d7-483c-a1cb-91c932b7f3c4" />
-        
+
         <label for="name">Name</label>
         <input class="form-control mb-3" type="text" name="name" id="name" placeholder="Enter your name" required />
-        
+
         <label for="email">Email</label>
         <input class="form-control mb-3" type="email" name="email" id="email" placeholder="Enter your email" required />
-        
+
         <label for="message">Message</label>
-        <textarea class="form-control mb-3" name="message" id="message" rows="4" placeholder="Enter your message" required></textarea>
-    
+        <textarea class="form-control mb-3" name="message" id="message" rows="4" placeholder="Enter your message"
+          required></textarea>
+
         <input type="hidden" name="redirect" value="https://web3forms.com/success" />
         <button class="btn glassy-btn" type="submit">Send</button>
       </form>
     </div>
-    
+
   </section>
 
   <!-- Footer -->
@@ -468,19 +477,13 @@ body.dark-mode .nav {
       loadParticles(isDarkMode ? "#ffffff" : "#000000", isDarkMode ? "#ffffff" : "#000000");
     });
 
-  function toggleMobileNav() {
-    const nav = document.getElementById('navMenu');
-    nav.classList.toggle('show');
-  }
-</script>
+    function toggleMobileNav() {
+      const nav = document.getElementById('navMenu');
+      nav.classList.toggle('show');
+    }
+  </script>
 
   </script>
 </body>
 
 </html>
-
-
-
-
-
-
