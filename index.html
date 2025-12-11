@@ -113,6 +113,13 @@
       object-fit: cover;
       border: 5px solid white;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+      margin-top: 0; /* Remove existing margin-top */
+    }
+
+    .profile-area {
+      position: relative;
+      display: inline-block; /* To contain the absolutely positioned status */
+      margin-top: 20px; /* Add margin-top to the container instead */
     }
 
     .glassy-btn {
@@ -305,9 +312,11 @@
 
   <!-- Hero Section -->
   <section class="hero-section text-center">
-    <img src="./assets/images/photo.jpg" alt="Rama Subramanian" class="profile-pic" />
-    <div class="open-to-work-status">
-      <span></span> Open to Work
+        <div class="profile-area">
+      <img src="./assets/images/photo.jpg" alt="Rama Subramanian" class="profile-pic" />
+      <div class="open-to-work-status">
+        <span></span> Open to Work
+      </div>
     </div>
     <h2 class="mt-4 gradient-heading">Hi, I'm Rama Subramanian</h2>
     <p class="lead">Frontend Developer | UI Developer | React Developer</p>
