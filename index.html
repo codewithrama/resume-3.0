@@ -67,6 +67,11 @@
       background: rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      /* Ensure it's above other content */
     }
 
     body.dark-mode .glassy-nav,
@@ -97,7 +102,8 @@
     }
 
     .hero-section {
-      padding: 60px 20px;
+      padding: 120px 20px 60px 20px;
+      /* Increased top padding to account for fixed header */
     }
 
     .profile-pic {
