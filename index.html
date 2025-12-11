@@ -113,13 +113,16 @@
       object-fit: cover;
       border: 5px solid white;
       box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-      margin-top: 0; /* Remove existing margin-top */
+      margin-top: 0;
+      /* Remove existing margin-top */
     }
 
     .profile-area {
       position: relative;
-      display: inline-block; /* To contain the absolutely positioned status */
-      margin-top: 20px; /* Add margin-top to the container instead */
+      display: inline-block;
+      /* To contain the absolutely positioned status */
+      margin-top: 20px;
+      /* Add margin-top to the container instead */
     }
 
     .glassy-btn {
@@ -234,6 +237,13 @@
     }
 
     .open-to-work-status {
+      position: absolute;
+      top: 0;
+      /* Adjust as needed for precise positioning */
+      right: -20px;
+      /* Adjust as needed for precise positioning */
+      transform: translate(50%, -50%);
+      /* Center based on its own size */
       display: inline-flex;
       align-items: center;
       gap: 5px;
@@ -244,7 +254,6 @@
       border-radius: 20px;
       font-size: 0.9em;
       font-weight: 600;
-      margin-top: 10px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     }
 
@@ -312,7 +321,7 @@
 
   <!-- Hero Section -->
   <section class="hero-section text-center">
-        <div class="profile-area">
+    <div class="profile-area">
       <img src="./assets/images/photo.jpg" alt="Rama Subramanian" class="profile-pic" />
       <div class="open-to-work-status">
         <span></span> Open to Work
